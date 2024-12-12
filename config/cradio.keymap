@@ -32,29 +32,31 @@
 
         default_layer {
             bindings = <
-&kp Q  &kp W  &kp E  &kp R      &kp T        &kp Y      &kp U       &kp I      &kp O    &kp P
-&kp A  &kp S  &kp D  &kp F      &kp G        &kp H      &kp J       &kp K      &kp L    &kp SQT
-&kp Z  &kp X  &kp C  &kp V      &kp B        &kp N      &kp M       &kp COMMA  &kp DOT  &kp FSLH
-                     &lt 1 ESC  &kp ENTER    &kp SPACE  &lt 2 BSPC
+&kp Q  &kp W  &kp E  &kp R      &kp T         &kp Y      &kp U        &kp I      &kp O    &kp P
+&kp A  &kp S  &kp D  &kp F      &kp G         &kp H      &kp J        &kp K      &kp L    &kp DEL
+&kp Z  &kp X  &kp C  &kp V      &kp B         &kp N      &kp M        &kp COMMA  &kp DOT  &trans
+                     &lt 1 TAB  &kp LSHIFT    &kp SPACE  &lt 2 ENTER
             >;
         };
 
-        right_layer {
+        number_layer {
             bindings = <
-&kp INS     &kp N1    &kp UP    &kp N3     &trans     &kp N7  &kp N8  &kp N9  &kp END    &kp COLON
-&kp DEL     &kp LEFT  &kp DOWN  &kp RIGHT  &trans     &kp N4  &kp N5  &kp N6  &kp RIGHT  &kp SEMI
-&caps_word  &kp N7    &kp N8    &kp N9     &kp N0     &kp N1  &kp N2  &kp N3  &trans     &trans
-                                &trans     &kp TAB    &kp N0  &trans
+&kp INS     &kp UP    &trans      &trans       &trans     &kp N7  &kp N8  &kp N9  &kp END  &trans
+&kp LEFT    &kp DOWN  &kp RIGHT   &trans       &trans     &kp N4  &kp N5  &kp N6  &trans   &trans
+&caps_word  &trans    &kp K_COPY  &kp K_PASTE  &trans     &kp N1  &kp N2  &kp N3  &trans   &trans
+                                  &trans       &kp TAB    &kp N0  &trans
             >;
         };
 
-        left_layer {
+        special_character_layer {
             bindings = <
-&trans    &kp LBKT  &kp LBRC  &kp RBRC  &trans       &kp CARET  &kp LPAR   &kp RPAR   &kp RBKT  &kp TILDE
-&kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT    &kp ASTRK  &kp MINUS  &kp EQUAL  &kp BSLH  &kp GRAVE
-&trans    &trans    &trans    &trans    &trans       &kp AMPS   &kp UNDER  &kp PLUS   &kp PIPE  &trans
-                              &trans    &trans       &trans     &trans
+&kp EXCL           &kp AT                 &kp HASH           &kp DOLLAR       &kp PRCNT        &kp CARET  &kp AMPS   &kp STAR       &kp GRAVE         &kp TILDE
+&kp DOUBLE_QUOTES  &kp LEFT_PARENTHESIS   &kp LEFT_BRACKET   &kp LEFT_BRACE   &kp BACKSLASH    &kp MINUS  &kp EQUAL  &kp COLON      &kp SEMI          &trans
+&kp SINGLE_QUOTE   &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp PIPE         &kp UNDER  &kp PLUS   &kp LESS_THAN  &kp GREATER_THAN  &kp QUESTION
+                                                             &trans           &kp ESCAPE       &trans     &trans
             >;
+
+            label = "special";
         };
 
         tri_layer {
